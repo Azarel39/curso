@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1> hola mundo </h1>
+  <h2>azarel fuentes</h2>
+  <script>
+    const invertirCadena = cadena => cadena.split("").reverse().join("");
+
+    let cadena = "Hola mi nombre  es Azarel";
+    console.log("Cadena:", invertirCadena(cadena));
+
+
+
+
+
+    const buscarPalabra = (frase2 = "", palabra2 = "") => {
+      if (!frase2) return console.log("");
+      if (frase2 === " ") return console.log("");
+      if (!palabra2) return console.log("");
+      if (palabra2 === " ") return console.log("");
+
+      let expReg = new RegExp(palabra2, "ig");
+      let cantidadRep = (frase2.match(expReg)).length;
+
+      console.log(`La frase es: ${frase2} \nLa palabra a buscar es: ${palabra2} \nCantidad de veces encontrada: ${cantidadRep}`);
+
+    }
+
+
+    buscarPalabra("SASASASASA", "SA");
+
+
+
+
+
+  </script>
+</body>
+
+</html>
