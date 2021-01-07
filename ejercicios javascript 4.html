@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1> hola mundo </h1>
+  <h2>azarel fuentes</h2>
+  <script>
+    let a = 4;
+
+    if (a % 2 === 0) {
+      console.log("El numero" + a + "es par");
+    } else {
+      console.info("El numero: " + a + " no es par")
+    }
+    console.log("**********");
+
+
+
+    const numeroPrimo = (numero = indefinido) => {
+
+
+      if (numero % numero === 0 && numero % 1 === 0 && numero % 2 == 0) {
+        console.log("El numero" + numero + "si es primo");
+      } else {
+        console.log("El numero" + numero + "no es primo");
+      }
+    }
+
+    numeroPrimo(- 1);
+    numeroPrimo(3);
+    numeroPrimo(1);
+    numeroPrimo(2);
+    numeroPrimo(8);
+    numeroPrimo(199);
+    numeroPrimo(4);
+    numeroPrimo(6);
+
+
+    const num = (numero = indefinido) => {
+
+      let fa = (numero * 1.8) + 32;
+      console.log(numero + "° C grados Celsius es " + fa + "° F Fahrenheit");
+
+
+      let Celsius = (numero - 32) / 1.8;
+      console.log(numero + "° F Fahrenheit es" + Celsius + "° C grados Celsius");
+
+    }
+    num(100);
+
+
+  </script>
+</body>
+
+</html>
