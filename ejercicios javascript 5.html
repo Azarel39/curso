@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1> hola mundo </h1>
+  <h2>Soy Azarel fuentes</h2>
+  <script>
+
+
+
+
+    const descuento = (monto = undefined, descuento = undefined) => {
+
+      if (monto === undefined) return console.warn("No se ha ingresado un monto");
+
+
+      if (typeof monto !== "number") return console.error("El monto ingresado no es un número");
+      if (monto === 0) return console.error("El monto no puede ser 0");
+      if (Math.sign(monto) === -1) return console.error("El monto no puede ser negativo");
+      if (descuento === undefined) return console.warn("No se ha ingresado el descuento a aplicar");
+      if (typeof descuento !== "number") return console.error("El descuento ingresado no es un número");
+      if (Math.sign(descuento) === -1) return console.error("No se ha ingresado un descuento válido");
+      if (descuento === 0) return console.info(`No hay descuento. El monto total es ${monto}`);
+
+      let x = monto - ((descuento * monto) / 100);
+
+      return (descuento <= 100)
+        ? console.info(`El monto es de ${monto} con un descuento de ${descuento}. El monto total es de ${x}`)
+        : console.error("No se ha ingresado un descuento válido")
+    }
+
+    descuento();
+    descuento(true);
+    descuento(230);
+    descuento(230, "Hola");
+    descuento(230, -120);
+    descuento(230, 120);
+    descuento(230, 0);
+    descuento(1000, 20);
+
+
+    //Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+
+
+
+    const fecha = (anio = undefined, mes = undefined, dia = undefined) => {
+
+      if (anio === undefined) { return console.warn("ingrese un anio"); }
+
+      if (typeof anio !== "number") return console.error("El año ingresado no es un número");
+
+      if (Math.sign(anio) === -1) return console.error("El año no puede ser negativo");
+
+      let aza = 2021;
+      let a = aza - anio;
+      console.log("del año " + anio + " hasta el año " + aza + " han pasado " + a + " años");
+
+
+      let b = 12 - mes;
+      let meses = a * 12 - b;
+
+      console.log("del mes" + mes + "del año" + anio + "hata la actualidad han pasado" + meses + "meses");
+
+
+    }
+
+    fecha();
+    fecha(true);
+    fecha(230);
+    fecha("Hola");
+    fecha(-120);
+    fecha(1995, 7, 22);
+
+
+
+  </script>
+</body>
+
+</html>
