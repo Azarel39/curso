@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1> hola mundo </h1>
+  <h2>Soy Azarel fuentes</h2>
+  <script>
+
+    const cuentaLetras = (cadena = "") => {
+      if (!cadena) return console.warn("No ha ingresado el texto");
+      let vocales = 0, consonantes = 0;
+      cadena = cadena.split("");
+
+      for (const key in cadena) {
+        if (/[aeiouAEIOUáéíóú]/.test(cadena[key])) {
+          vocales += 1;
+        } else if (/[^\^$.*+?=!:|\\/()\[\]{} ]$/.test(cadena[key])) {
+          consonantes += 1;
+        }
+      }
+
+      return console.info(`Vocales ${vocales}, Consonantes ${consonantes}`);
+    }
+
+    cuentaLetras();
+    cuentaLetras("");
+    cuentaLetras("Hola Mundo cruel");
+
+
+
+
+  </script>
+</body>
+
+</html>
