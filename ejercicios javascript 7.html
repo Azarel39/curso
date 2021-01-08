@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1> hola mundo </h1>
+  <h2>Soy Azarel fuentes</h2>
+  <script>
+
+
+    const arrayValor = (array = undefined) => {
+      if (array === undefined) return console.warn("No se ha ingresado un arreglo");
+      if (!(array instanceof Array)) return console.error("El valor ingresado no es un arreglo");
+      if (array.length === 0) return console.warn("El arreglo ingresado no puede estar vacío");
+
+      for (const elemtento of array) {
+        if (typeof elemtento !== "number")
+          return console.error("El arreglo solo puede contener números");
+      }
+
+      array = array.sort((a, b) => a > b ? 1 : -1);
+
+      let valores = [];
+
+      valores.push(array[array.length - 1]);
+      valores.push(array[0]);
+
+      const contenedor = {
+        original: array,
+        maxMin: valores
+      }
+
+      return console.info(contenedor);
+    }
+
+    arrayValor();
+    arrayValor(30);
+    arrayValor([]);
+    arrayValor(["H", "o", "l", "a"]);
+    arrayValor([1, 4, 5, 99, -60]);
+
+
+
+  </script>
+</body>
+
+</html>
